@@ -30,6 +30,12 @@ const PricingPage: LazyExoticComponent<any> = React.lazy(() =>
     }))
 )
 
+const ShopPage: LazyExoticComponent<any> = React.lazy(() =>
+    import('./pages/Commerce/Shop').then((module) => ({
+        default: module.Shop
+    }))
+)
+
 const UnderConstructionPage: LazyExoticComponent<any> = React.lazy(() => 
     import('./pages/Templates/UnderConstruction').then((module) => ({
         default: module.UnderConstruction
@@ -79,15 +85,15 @@ export const Routing: PageRouting[] = [
         component: EditPage
     },
     {
+        path: '/shop',
+        component: ShopPage
+    },
+    {
         path: '/plan',
         component: UnderConstructionPage
     },
     {
         path: '/discussion',
-        component: UnderConstructionPage
-    },
-    {
-        path: '/shop',
         component: UnderConstructionPage
     },
     {
