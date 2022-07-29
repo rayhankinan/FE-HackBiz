@@ -1,7 +1,6 @@
 import { ShoppingCartOutlined } from '@ant-design/icons'
 import { Avatar, Button, Card, Col, Row, Spin } from 'antd'
-import { useEffect, useState } from 'react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { StandardLayout } from '../../layout/StandardLayout'
 import { ShopModal } from '../../components/Commmerce/ShopModal'
 
@@ -97,33 +96,33 @@ export const Shop: React.FC = () => {
         <Spin tip="Loading . . ." spinning={loading}>
             <StandardLayout>
                 <Row gutter={16}>
-                    {data.map((element) => {
+                    {data.map((item) => {
                         return (
                             <div className='flex items-center justify-center'>
-                            <Col span={8} key={element.title}>
+                            <Col span={8} key={item.title}>
                                 <Card
                                     hoverable
                                     className = 'rounded-lg h-fit w-96 my-2'
                                     cover={
                                         <img 
                                             className='h-96 w-96'
-                                            alt={element.altImage}
-                                            src={element.srcImage}
+                                            alt={item.altImage}
+                                            src={item.srcImage}
                                         />
                                     }
                                     actions={[
                                         <Button className='rounded-lg bg-green-600 justify-center' type="primary" onClick={() => {
                                             setVisibleModal(true)
-                                            setSelectedData(element)
+                                            setSelectedData(item)
                                         }}>
                                             <ShoppingCartOutlined />
                                         </Button>
                                     ]}
                                 >
                                     <Meta
-                                        avatar={<Avatar style={{ verticalAlign: 'middle' }} size="large">{element.username}</Avatar>}
-                                        title={element.title}
-                                        description={element.price}
+                                        avatar={<Avatar style={{ verticalAlign: 'middle' }} size="large">{item.username}</Avatar>}
+                                        title={item.title}
+                                        description={item.price}
                                     />
                                 </Card>
                             </Col>

@@ -44,7 +44,6 @@ export const DiscussionModal: ({}: Props) => JSX.Element = ({
             footer={footer}
         >
             <Card
-                key={selectedData.title}
                 actions={[
                     <IconText icon={StarOutlined} text={`${selectedData.star}`} key="list-vertical-star-o" />,
                     <IconText icon={LikeOutlined} text={`${selectedData.like}`} key="list-vertical-like-o" />,
