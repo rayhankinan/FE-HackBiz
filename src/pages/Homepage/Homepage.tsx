@@ -1,4 +1,4 @@
-import { Button} from 'antd'
+import { Button } from 'antd'
 import { StandardLayout } from '../../layout/StandardLayout'
 
 export const Homepage: React.FC = () => {

@@ -42,7 +42,7 @@ export const Login: React.FC = () => {
 
             <Form.Item>
                 <Button type="primary" htmlType="submit" className="w-full">
-                Log in
+                    Log in
                 </Button>
                 Or <a href="/register">register now!</a>
             </Form.Item>

@@ -1,6 +1,6 @@
 import { Layout, Menu } from 'antd'
 import { useContext } from 'react'
-import { userContext } from '../context'
+import { UserContext } from '../context'
 
 const { Header, Content, Footer } = Layout
 
@@ -11,7 +11,7 @@ interface StandardLayoutProps {
 export const StandardLayout: ({} : StandardLayoutProps) => JSX.Element = ({
     children = undefined
 }: StandardLayoutProps) => {
-    const { user }: any = useContext(userContext)
+    const { user }: any = useContext(UserContext)
 
     return (
         <Layout style={{ minHeight: '100vh' }}>
