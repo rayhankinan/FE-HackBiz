@@ -91,16 +91,11 @@ export const Routing: PageRouting[] = [
         component: UnderConstructionPage
     },
     {
-        path: '/agreement',
-        component: UnderConstructionPage
-    },
-    {
         path: '/about',
         component: UnderConstructionPage
     },
     {
         path: '*',
         component: ErrorPage
-    },
-
+    }
 ]
