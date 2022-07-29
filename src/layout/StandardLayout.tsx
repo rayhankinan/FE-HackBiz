@@ -26,6 +26,7 @@ export const StandardLayout: ({} : StandardLayoutProps) => JSX.Element = ({
                     theme="light"
                     mode="horizontal"
                     defaultSelectedKeys={['1']}
+                    className='text-xl font-sans'
                     items={[
                         {
                             key: 1,
