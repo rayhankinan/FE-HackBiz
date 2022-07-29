@@ -58,21 +58,21 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
                                     <img src="../../../src/resources/guest_user.png" className="mr-6 h-14" alt="Guest User Profile" />
                                 </li>
                                 <li>
-                                    <a onClick={() => navigate('/profile')} className="font-bold text-sm text-blue-600 dark:text-blue-500 hover:underline">Guest 12345</a>
+                                    <a onClick={() => navigate('/profile')} className="font-bold text-sm text-blue-600 hover:underline">Guest 12345</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-                <nav className="bg-gray-50 dark:bg-gray-700 h-15">
+                <nav className=" bg-gray-700 h-15">
                     <div className="py-3 px-4 mx-auto max-w-screen-xl md:px-6">
                         <div className="flex items-center">
                             <ul className="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
                                 <li>
-                                    <a onClick={() => navigate('/aboutUs')} className="text-gray-900 dark:text-white hover:underline" aria-current="page">Why Construct.ly</a>
+                                    <a onClick={() => navigate('/aboutUs')} className="text-white hover:underline" aria-current="page">Why Construct.ly</a>
                                 </li>
                                 <li>
-                                    <a onClick={() => navigate('/pricing')} className="text-gray-900 dark:text-white hover:underline" aria-current="page">Pricing</a>
+                                    <a onClick={() => navigate('/pricing')} className="text-white hover:underline" aria-current="page">Pricing</a>
                                 </li>
                                 <li>
                                     <Dropdown overlay={communityMenu}>
