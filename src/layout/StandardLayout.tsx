@@ -1,5 +1,5 @@
-import { Dropdown, Space, Layout, Menu, Avatar, Button } from 'antd'
-import { UserOutlined, DownOutlined } from '@ant-design/icons';
+import { Dropdown, Space, Layout, Menu } from 'antd'
+import { DownOutlined } from '@ant-design/icons';
 import { useContext } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { UserContext } from '../context'
@@ -15,29 +15,6 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
 }: StandardLayoutProps) => {
     const { user }: any = useContext(UserContext)
     const navigate = useNavigate()
-    const pricingMenu = (
-        <Menu
-            items={[
-                {
-                    key: '1',
-                    label: (
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-                            Free
-                        </a>
-                    ),
-                },
-                {
-                    key: '2',
-                    label: (
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-                            Business
-                        </a>
-                    ),
-                },
-            ]}
-        />
-    );
-
     const communityMenu = (
         <Menu
             items={[
@@ -70,7 +47,7 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
 
             <Header style={{ position: 'fixed', zIndex: 1, width: '100%', height: '100px', background: '#ffffff', padding: 0, margin: 0 }}>
                 <div className="logo" style={{ width: '100%' }} />
-                <nav className="bg-white border-gray-200 ">
+                <nav className="static bg-white border-gray-200 h-20">
                     <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
                         {/* <a href="https://flowbite.com" className="flex items-center"> */}
                             <img src="../../../src/resources/tes.png" className="mr-6 h-14" alt="Flowbite Logo" />
@@ -87,7 +64,7 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
                         </div>
                     </div>
                 </nav>
-                <nav className="bg-gray-50 dark:bg-gray-700">
+                <nav className="bg-gray-50 dark:bg-gray-700 h-15">
                     <div className="py-3 px-4 mx-auto max-w-screen-xl md:px-6">
                         <div className="flex items-center">
                             <ul className="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
@@ -113,7 +90,7 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
                 </nav>
 
             </Header>
-            <Content className="site-layout" style={{ padding: '0', marginTop: 64 }}>
+            <Content className="site-layout" style={{ paddingTop:60, marginTop: 64 }}>
                 {children}
             </Content>
             <Footer style={{ textAlign: 'center' }}>Construct.ly ©2022 Created by asepBalon</Footer>
