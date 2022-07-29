@@ -7,9 +7,9 @@ import { UserContext } from '../../context'
 export const Login: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(false)
 
-    const navigate = useNavigate()
-
     const { setUser }: any = useContext(UserContext)
+
+    const navigate = useNavigate()
 
     const onFinish = (values: any) => {
         // SIMULASI CHECK USER DAN MENAMBAH COOKIES USER

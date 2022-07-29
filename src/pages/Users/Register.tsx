@@ -29,8 +29,8 @@ const tailFormItemLayout = {
 }
 
 export const Register: React.FC = () => {
-    const [data, setData] = useState<any>([])
     const [loading, setLoading] = useState<boolean>(true)
+    const [data, setData] = useState<{value: string, label: string}[]>([])
 
     const navigate = useNavigate()
 
@@ -45,8 +45,7 @@ export const Register: React.FC = () => {
     useEffect(() => {
         // SIMULASI GET DATA
         setTimeout(() => {
-            const result = {
-                locations: [
+            const result = [
                     {
                         value: 'indonesia',
                         label: 'Indonesia'
@@ -59,8 +58,7 @@ export const Register: React.FC = () => {
                         value: 'thailand',
                         label: 'Thailand'
                     }
-                ],
-            }
+            ]
 
             setData(result)
             setLoading(false)
@@ -145,7 +143,7 @@ export const Register: React.FC = () => {
                         { type: 'array', required: true, message: 'Please select your residence!' },
                     ]}
                 >
-                    <Cascader options={data.locations} placeholder="select your residence" />
+                    <Cascader options={data} placeholder="select your residence" />
                 </Form.Item>
 
                 <Form.Item

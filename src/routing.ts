@@ -24,6 +24,18 @@ const ProfilePage: LazyExoticComponent<any> = React.lazy(() =>
     }))
 )
 
+const UnderConstructionPage: LazyExoticComponent<any> = React.lazy(() => 
+    import('./pages/Templates/UnderConstruction').then((module) => ({
+        default: module.UnderConstruction
+    }))
+)
+
+const ErrorPage: LazyExoticComponent<any> = React.lazy(() => 
+    import('./pages/Templates/Error').then((module) => ({
+        default: module.Error
+    }))
+)
+
 interface PageRouting {
     path: string
     component: LazyExoticComponent<any>
@@ -45,5 +57,33 @@ export const Routing: PageRouting[] = [
     {
         path: '/profile',
         component: ProfilePage
+    },
+    {
+        path: '/profile/edit',
+        component: UnderConstructionPage
+    },
+    {
+        path: '/plan',
+        component: UnderConstructionPage
+    },
+    {
+        path: '/discussion',
+        component: UnderConstructionPage
+    },
+    {
+        path: '/shop',
+        component: UnderConstructionPage
+    },
+    {
+        path: '/recover',
+        component: UnderConstructionPage
+    },
+    {
+        path: '/agreement',
+        component: UnderConstructionPage
+    },
+    {
+        path: '*',
+        component: ErrorPage
     }
 ]

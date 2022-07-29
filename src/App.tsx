@@ -8,7 +8,7 @@ import './App.css'
 
 function App() {
     const [loading, setLoading] = useState<boolean>(true)
-    const [user, setUser] = useState<any>({})
+    const [user, setUser] = useState<{username?: string, password?:string}>({})
 
     useEffect(() => {
         // SIMULASI CHECK COOKIES USER
