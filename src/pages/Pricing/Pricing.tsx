@@ -159,7 +159,6 @@ export const Pricing: React.FC = () => {
                             Choose plan
                         </button>
                     </div>
-
                 </div>
             </div>
         </StandardLayout>

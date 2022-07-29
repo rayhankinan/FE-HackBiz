@@ -1,4 +1,4 @@
-import { Avatar, Button, List, Spin } from 'antd'
+import { Button, List, Spin } from 'antd'
 import { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { StandardLayout } from '../../layout/StandardLayout'

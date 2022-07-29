@@ -1,4 +1,4 @@
-import { Dropdown, Space, Layout, Menu } from 'antd'
+import { Dropdown, Space, Layout, Menu, Avatar } from 'antd'
 import { DownOutlined } from '@ant-design/icons';
 import { useContext } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
@@ -22,7 +22,7 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
                 {
                     key: '1',
                     label: (
-                        <a target="_blank" rel="noopener noreferrer" onClick={() => navigate('/forum')}>
+                        <a target="_blank" rel="noopener noreferrer" onClick={() => navigate('/discussion')}>
                             Forum
                         </a>
                     ),
@@ -30,7 +30,7 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
                 {
                     key: '2',
                     label: (
-                        <a target="_blank" rel="noopener noreferrer" onClick={() => navigate('/buyAndSell')}>
+                        <a target="_blank" rel="noopener noreferrer" onClick={() => navigate('/shop')}>
                             Buy & Sell
                         </a>
                     ),
@@ -50,9 +50,7 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
                 <div className="logo" style={{ width: '100%' }} />
                 <nav className="static bg-white border-gray-200 h-20">
                     <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
-                        {/* <a href="https://flowbite.com" className="flex items-center"> */}
-                            <img onClick={() => navigate('/')} src="../../../src/resources/tes.png" className="cursor-pointer mr-6 h-14" alt="Flowbite Logo" />
-                        {/* </a> */}
+                        <img onClick={() => navigate('/')} src="../../../src/resources/tes.png" className="cursor-pointer mr-6 h-14" alt="Profile Picture" />
                         <div className="flex items-center">
                             <ul className='flex flex-row'>
                                 <li>
@@ -70,7 +68,7 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
                         <div className="flex items-center">
                             <ul className="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
                                 <li>
-                                    <a onClick={() => navigate('/aboutUs')} className="text-white hover:underline" aria-current="page">Why Construct.ly</a>
+                                    <a onClick={() => navigate('/about')} className="text-white hover:underline" aria-current="page">Why Construct.ly</a>
                                 </li>
                                 <li>
                                     <a onClick={() => navigate('/pricing')} className="text-white hover:underline" aria-current="page">Pricing</a>

@@ -1,5 +1,4 @@
 import { Avatar, Button, Card, Modal } from 'antd'
-import { useEffect, useState } from 'react'
 
 const { Meta } = Card
 

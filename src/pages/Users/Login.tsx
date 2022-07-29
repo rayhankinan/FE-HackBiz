@@ -54,7 +54,7 @@ export const Login: React.FC = () => {
                         <Checkbox>Remember me</Checkbox>
                     </Form.Item>
 
-                    <a className="float-right" href="/recover">
+                    <a className="float-right" onClick={() => navigate('/recover')}>
                         Forgot password
                     </a>
                 </Form.Item>
@@ -63,7 +63,7 @@ export const Login: React.FC = () => {
                     <Button type="primary" htmlType="submit" className="w-full">
                         Log in
                     </Button>
-                    Or <a href="/register">register now!</a>
+                    Or <a onClick={() => navigate('/register')}>register now!</a>
                 </Form.Item>
             </Form>
         </Spin>
