@@ -69,10 +69,10 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
                         <div className="flex items-center">
                             <ul className="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
                                 <li>
-                                    <a onClick={() => navigate('/aboutUs')} href="#" className="text-gray-900 dark:text-white hover:underline" aria-current="page">Why Construct.ly</a>
+                                    <a onClick={() => navigate('/aboutUs')} className="text-gray-900 dark:text-white hover:underline" aria-current="page">Why Construct.ly</a>
                                 </li>
                                 <li>
-                                    <a onClick={() => navigate('/pricing')} href="#" className="text-gray-900 dark:text-white hover:underline" aria-current="page">Pricing</a>
+                                    <a onClick={() => navigate('/pricing')} className="text-gray-900 dark:text-white hover:underline" aria-current="page">Pricing</a>
                                 </li>
                                 <li>
                                     <Dropdown overlay={communityMenu}>

@@ -24,6 +24,12 @@ const ProfilePage: LazyExoticComponent<any> = React.lazy(() =>
     }))
 )
 
+const PricingPage: LazyExoticComponent<any> = React.lazy(() =>
+    import('./pages/Pricing/Pricing').then((module) => ({
+        default: module.Pricing
+    }))
+)
+
 const UnderConstructionPage: LazyExoticComponent<any> = React.lazy(() => 
     import('./pages/Templates/UnderConstruction').then((module) => ({
         default: module.UnderConstruction
@@ -57,6 +63,10 @@ export const Routing: PageRouting[] = [
     {
         path: '/profile',
         component: ProfilePage
+    },
+    {
+        path: '/pricing',
+        component: PricingPage
     },
     {
         path: '/profile/edit',
