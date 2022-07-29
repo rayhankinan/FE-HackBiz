@@ -46,7 +46,7 @@ export const Profile: React.FC = () => {
             setData(result)
             setLoading(false)
         }, 1000)
-    })
+    }, [data])
 
     return (
         <Spin tip="Loading . . ." spinning={loading} >
