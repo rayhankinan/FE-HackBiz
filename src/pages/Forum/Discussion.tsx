@@ -1,5 +1,5 @@
 import { LikeOutlined, MessageOutlined, StarOutlined } from '@ant-design/icons'
-import { Avatar, Input, List, Space, Spin, Tag } from 'antd'
+import { Avatar, Input, List, Space, Spin, Tag, Card } from 'antd'
 import type { Moment } from 'moment'
 import moment from 'moment'
 import React, { useEffect, useState } from 'react'
@@ -74,7 +74,7 @@ export const Discussion: React.FC = () => {
                     comment: 1
                 },
                 {
-                    username: "dhiyarisalah",
+                    username: "vincentius",
                     title: "Cara paling ramah lingkungan dalam recycle beton?",
                     content: "Bagaimana cara terbaik dalam merecycle beton.",
                     tag: [
@@ -85,6 +85,45 @@ export const Discussion: React.FC = () => {
                     star: 20,
                     like: 50,
                     comment: 12
+                },
+                {
+                    username: "fikri",
+                    title: "Kayu paling kuat?",
+                    content: "Saya mau buat rumah 3 lantai, bagusnya pakai kayu apa?",
+                    tag: [
+                        "rumah",
+                        "kayu"
+                    ],
+                    timestamp: moment(1659125275000).subtract(3, 'hour'),
+                    star: 7,
+                    like: 4,
+                    comment: 3
+                },
+                {
+                    username: "dhiya",
+                    title: "Pasir paling murah?",
+                    content: "Saya mau buat rumah kecil, pasir paling cocok apa ya?",
+                    tag: [
+                        "pasir",
+                        "rumah kecil"
+                    ],
+                    timestamp: moment(1659125275000).subtract(0.5, 'hour'),
+                    star: 2,
+                    like: 1,
+                    comment: 0
+                },
+                {
+                    username: "rayhankinan",
+                    title: "Beton terkuat?",
+                    content: "Saya mau buat mall, apa beton yang cocok?",
+                    tag: [
+                        "mall",
+                        "beton"
+                    ],
+                    timestamp: moment(1659125275000).subtract(0.3, 'hour'),
+                    star: 14,
+                    like: 12,
+                    comment: 5
                 }
             ]
 
@@ -96,13 +135,18 @@ export const Discussion: React.FC = () => {
     return (
         <Spin tip="Loading . . ." spinning={loading}>
             <StandardLayout>
+                <div className='grid h-auto place-items-center'>
                 <Search 
                     placeholder="Search . . ."
                     loading={loadingSearch}
                     allowClear
                     size="large"
                     onSearch={onSearch}
+                    className='w-4/6 my-5'
                 />
+                <Card
+                    className='w-4/6'
+                >
                 <List 
                     itemLayout="vertical"
                     size="large"
@@ -136,6 +180,8 @@ export const Discussion: React.FC = () => {
                         </List.Item>
                     )}
                 />
+                </Card>
+                </div>
             </StandardLayout>
             {visibleModal && (
                 <DiscussionModal 
