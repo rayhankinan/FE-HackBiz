@@ -20,10 +20,10 @@ export const StandardLayout: ({} : StandardLayoutProps) => JSX.Element = ({
 
     return (
         <Layout style={{ minHeight: '100vh' }}>
-            <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+            <Header style={{ position: 'fixed', zIndex: 1, width: '100%', background:'white' }}>
                 <div className="logo" />
                 <Menu
-                    theme="dark"
+                    theme="light"
                     mode="horizontal"
                     defaultSelectedKeys={['1']}
                     items={[
@@ -42,7 +42,7 @@ export const StandardLayout: ({} : StandardLayoutProps) => JSX.Element = ({
                     ]}
                 />
             </Header>
-            <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
+            <Content className="site-layout" style={{ padding: '0', marginTop: 64 }}>
                 { children }
             </Content>
             <Footer style={{ textAlign: 'center' }}>Construct.ly ©2022 Created by asepBalon</Footer>
