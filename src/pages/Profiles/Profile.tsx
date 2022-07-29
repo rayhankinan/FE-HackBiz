@@ -39,7 +39,7 @@ export const Profile: React.FC = () => {
                         </button>
                     </div>
 
-                    <div className='flex items-center justify-center h-auto space-x-40'>
+                    <div className='flex items-center justify-center h-auto space-x-40 py-6'>
                         <div className="shadow-lg rounded-2xl w-96 bg-white p-4" style={{ height: 730 }}>
                             <div className="flex text-black  items-center justify-between">
                                 <p className="text-4xl font-medium mb-4"></p>
