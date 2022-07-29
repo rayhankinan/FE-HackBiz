@@ -72,33 +72,32 @@ export const Profile: React.FC = () => {
 
                         <div className="shadow-lg rounded-2xl w-96 bg-white p-4" style={{ height: 730 }}>
                             <div className="flex text-black  items-center justify-between">
-                                <p className="text-4xl font-medium mb-4">
-                                </p>
+                                <p className="text-4xl font-medium mb-4"></p>
                             </div>
-                            <p  className="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100">
+                            <div className="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Email</h5>
                                 <p className="font-normal text-gray-700 ">example@example.com</p>
-                            </p>
-                            <p  className="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100">
+                            </div>
+                            <div className="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Name</h5>
                                 <p className="font-normal text-gray-700 ">Guest guest</p>
-                            </p>
-                            <p  className="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100">
+                            </div>
+                            <div className="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Company</h5>
                                 <p className="font-normal text-gray-700 ">The guest company</p>
-                            </p>
-                            <p  className="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100">
+                            </div>
+                            <div className="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Role</h5>
                                 <p className="font-normal text-gray-700 ">Student</p>
-                            </p>
-                            <p  className="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100">
+                            </div>
+                            <div className="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Country</h5>
                                 <p className="font-normal text-gray-700 ">Indonesia</p>
-                            </p>
-                            <p  className="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100">
+                            </div>
+                            <div className="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Subscription</h5>
                                 <p className="font-normal text-gray-700 ">Free</p>
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>
