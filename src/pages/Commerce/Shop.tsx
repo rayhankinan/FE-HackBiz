@@ -66,7 +66,6 @@ export const Shop: React.FC = () => {
                         return (
                             <Col span={8} key={index}>
                                 <Card
-                                    style={{ width: 300 }}
                                     cover={
                                         <img 
                                             alt={element.altImage}

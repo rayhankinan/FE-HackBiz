@@ -15,6 +15,7 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
 }: StandardLayoutProps) => {
     const { user }: any = useContext(UserContext)
     const navigate = useNavigate()
+
     const communityMenu = (
         <Menu
             items={[
@@ -58,7 +59,7 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
                                     <img src="../../../src/resources/guest_user.png" className="mr-6 h-14" alt="Guest User Profile" />
                                 </li>
                                 <li>
-                                    <a onClick={() => navigate('/profile')} className="font-bold text-sm text-blue-600 hover:underline">Guest 12345</a>
+                                    <a onClick={() => navigate('/profile')} className="font-bold text-sm text-blue-600 hover:underline">{user.username}</a>
                                 </li>
                             </ul>
                         </div>
