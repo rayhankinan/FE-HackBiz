@@ -73,7 +73,7 @@ export const Login: React.FC = () => {
                                 <Button type="primary" htmlType="submit" className="w-full text-black">
                                     Log in
                                 </Button>
-                                Or <a onClick={() => navigate('/register')}>register now!</a>
+                                Or <a onClick={() => navigate('/register')}>sign up now!</a>
                             </Form.Item>
                         </Form>
                     </Spin>
