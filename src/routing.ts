@@ -6,6 +6,12 @@ const LoginPage: LazyExoticComponent<any> = React.lazy(() =>
     }))
 )
 
+const Homepage: LazyExoticComponent<any> = React.lazy(() => 
+    import('./pages/Homepage/Homepage').then((module) => ({
+        default: module.Homepage
+    }))
+)
+
 interface PageRouting {
     path: string;
     component: LazyExoticComponent<any>;
@@ -15,5 +21,9 @@ export const Routing: PageRouting[] = [
     {
         path: '/login',
         component: LoginPage
+    },
+    {
+        path: '/homepage',
+        component: Homepage
     }
 ]
