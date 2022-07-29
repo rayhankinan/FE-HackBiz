@@ -1,15 +1,28 @@
 import { LockOutlined, UserOutlined } from '@ant-design/icons'
 import { Button, Checkbox, Form, Input } from 'antd'
-import React from 'react'
+import { useContext } from 'react'
+import { useNavigate } from "react-router-dom"
+import { UserContext } from '../../context'
 
 export const Login: React.FC = () => {
+    const navigate = useNavigate()
+    const { setUser }: any = useContext(UserContext)
+
     const onFinish = (values: any) => {
-        console.log('Received values of form: ', values)
+        // SIMULASI MENAMBAH COOKIES USER
+        setTimeout(() => {
+            const { username, password } = values
+            setUser({
+                username,
+                password
+            })
+            navigate('/')
+        }, 1000)
     }
 
     return (
         <Form
-            name="normal_login"
+            name="login"
             className="max-w-xs"
             initialValues={{ remember: true }}
             onFinish={onFinish}
@@ -42,7 +55,7 @@ export const Login: React.FC = () => {
 
             <Form.Item>
                 <Button type="primary" htmlType="submit" className="w-full">
-                Log in
+                    Log in
                 </Button>
                 Or <a href="/register">register now!</a>
             </Form.Item>

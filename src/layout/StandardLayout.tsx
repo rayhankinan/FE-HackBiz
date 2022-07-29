@@ -1,6 +1,7 @@
 import { Layout, Menu } from 'antd'
 import { useContext } from 'react'
-import { userContext } from '../context'
+import { Navigate } from 'react-router-dom'
+import { UserContext } from '../context'
 
 const { Header, Content, Footer } = Layout
 
@@ -11,7 +12,11 @@ interface StandardLayoutProps {
 export const StandardLayout: ({} : StandardLayoutProps) => JSX.Element = ({
     children = undefined
 }: StandardLayoutProps) => {
-    const { user }: any = useContext(userContext)
+    const { user }: any = useContext(UserContext)
+
+    if (!user.username || !user.password) {
+        return <Navigate to={"/login"} />
+    }
 
     return (
         <Layout style={{ minHeight: '100vh' }}>

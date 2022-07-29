@@ -1,11 +1,5 @@
-import {
-    Button,
-    Cascader,
-    Checkbox,
-    Form,
-    Input,
-    Select
-} from 'antd'
+import { Button, Cascader, Checkbox, Form, Input, Select } from 'antd'
+import { useNavigate } from "react-router-dom"
 
 const { Option } = Select
 
@@ -68,9 +62,13 @@ const tailFormItemLayout = {
 
 export const Register: React.FC = () => {
     const [form] = Form.useForm()
+    const navigate = useNavigate()
 
     const onFinish = (values: any) => {
-        console.log('Received values of form: ', values)
+        // SIMULASI POST USER
+        setTimeout(() => {
+            navigate('/login')
+        }, 1000)
     }
 
     const prefixSelector = (
