@@ -7,7 +7,7 @@ function App() {
         <BrowserRouter>
             <Routes>
                 {Routing.map((route) => {
-                    const Component = route.component;
+                    const Component = route.component
                     return (
                         <Route
                             caseSensitive
@@ -15,7 +15,7 @@ function App() {
                             key={route.path}
                             element={<Component />}
                         />
-                    );
+                    )
                 })}
             </Routes>
         </BrowserRouter>
