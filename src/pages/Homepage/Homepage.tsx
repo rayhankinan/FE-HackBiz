@@ -1,6 +1,6 @@
 import { Card } from 'antd'
 import { useNavigate } from 'react-router-dom'
-import { StandardLayout } from '../../layout/StandardLayout'
+import { StandardLayout } from '../../../src/layout/StandardLayout'
 
 const { Meta } = Card;
 
