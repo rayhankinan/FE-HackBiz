@@ -27,7 +27,6 @@ export const Login: React.FC = () => {
 
     return (
         < div className='bg-gradient-to-b from-slate-900 via-slate-600 to-white min-h-screen'>
-
             <div className='flex items-center justify-center h-auto space-x-40 pt-56'>
                 <div className="shadow-lg rounded-2xl w-96 bg-white p-4" style={{ height: 520 }}>
                     <img src="../../../src/resources/logo.png" alt="" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '40%' }} />
@@ -64,7 +63,7 @@ export const Login: React.FC = () => {
                                     <Checkbox>Remember me</Checkbox>
                                 </Form.Item>
 
-                                <a className="float-right" onClick={() => navigate('/recover')}>
+                                <a className="float-right" href="#">
                                     Forgot password
                                 </a>
                             </Form.Item>

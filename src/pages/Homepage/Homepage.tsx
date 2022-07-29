@@ -2,8 +2,6 @@ import { Card } from 'antd'
 import { useNavigate } from 'react-router-dom'
 import { StandardLayout } from '../../../src/layout/StandardLayout'
 
-const { Meta } = Card;
-
 export const Homepage: React.FC = () => {
     const navigate = useNavigate()
 

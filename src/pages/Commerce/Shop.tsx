@@ -97,10 +97,10 @@ export const Shop: React.FC = () => {
         <Spin tip="Loading . . ." spinning={loading}>
             <StandardLayout>
                 <Row gutter={16}>
-                    {data.map((element, index) => {
+                    {data.map((element) => {
                         return (
                             <div className='flex items-center justify-center'>
-                            <Col span={8} key={index}>
+                            <Col span={8} key={element.title}>
                                 <Card
                                     hoverable
                                     className = 'rounded-lg h-fit w-96 my-2'

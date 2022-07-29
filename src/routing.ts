@@ -43,6 +43,12 @@ const AboutPage: LazyExoticComponent<any> = React.lazy(() =>
     }))
 )
 
+const DiscussionPage: LazyExoticComponent<any> = React.lazy(() =>
+    import('./pages/Forum/Discussion').then((module) => ({
+        default: module.Discussion
+    }))
+)
+
 const UnderConstructionPage: LazyExoticComponent<any> = React.lazy(() => 
     import('./pages/Templates/UnderConstruction').then((module) => ({
         default: module.UnderConstruction
@@ -91,11 +97,7 @@ export const Routing: PageRouting[] = [
     },
     {
         path: '/discussion',
-        component: UnderConstructionPage
-    },
-    {
-        path: '/recover',
-        component: UnderConstructionPage
+        component: DiscussionPage
     },
     {
         path: '/about',
