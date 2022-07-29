@@ -1,7 +1,10 @@
 import { Button } from 'antd'
+import { useNavigate } from 'react-router-dom'
 import { StandardLayout } from '../../layout/StandardLayout'
 
 export const Homepage: React.FC = () => {
+    const navigate = useNavigate()
+
     return (
         <StandardLayout>
             <div className='bg-gradient-to-b from-slate-900 via-slate-600 to-white '>
@@ -9,9 +12,10 @@ export const Homepage: React.FC = () => {
                     Better Planning <br/> Less Waste
                 </h1>
                 <div>
-                    <Button type="primary">Plan</Button>
-                    <Button type="primary">Community</Button>
-                    <Button type="primary">Buy & Sell</Button>
+                    <Button type="primary" onClick={() => navigate('/plan')}>Plan</Button>
+                    <Button type="primary" onClick={() => navigate('/discussion')}>Community</Button>
+                    <Button type="primary" onClick={() => navigate('/shop')}>Buy & Sell</Button>
+                    <Button type="primary" onClick={() => navigate('/profile')}>Profile</Button>
                 </div>
             </div>
         </StandardLayout>
