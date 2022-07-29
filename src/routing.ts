@@ -18,6 +18,12 @@ const RegisterPage: LazyExoticComponent<any> = React.lazy(() =>
     }))
 )
 
+const ProfilePage: LazyExoticComponent<any> = React.lazy(() =>
+    import('./pages/Profiles/Profile').then((module) => ({
+        default: module.Profile
+    }))
+)
+
 interface PageRouting {
     path: string
     component: LazyExoticComponent<any>
@@ -35,5 +41,9 @@ export const Routing: PageRouting[] = [
     {
         path: '/register',
         component: RegisterPage
+    },
+    {
+        path: '/profile',
+        component: ProfilePage
     }
 ]
