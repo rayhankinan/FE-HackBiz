@@ -16,7 +16,7 @@ export const Homepage: React.FC = () => {
                     <Card
                         hoverable
                         onClick={() => navigate('/plan')}
-                        className = 'rounded-lg content-center hover:bg-neutral-800 h-60 w-60' 
+                        className = 'rounded-lg content-center hover:bg-neutral-800 h-52 w-52' 
                         // style={{ width: 240 }}
                         cover={<img className='object-scale-down px-8 py-8 hover:invert' alt="Plan" src="src/resources/blueprint.png" />}
                     >
@@ -26,9 +26,9 @@ export const Homepage: React.FC = () => {
                     <Card
                         hoverable
                         onClick={() => navigate('/discussion')}
-                        className = 'rounded-lg content-center hover:bg-neutral-800 h-60 w-60' 
+                        className = 'rounded-lg content-center hover:bg-neutral-800 h-52 w-52' 
                         style={{ width: 240 }}
-                        cover={<img className='object-scale-down hover:invert'alt="Community" src="src/resources/community.png" />}
+                        cover={<img className='object-scale-down px-8 py-4 hover:invert'alt="Community" src="src/resources/community.png" />}
                     >
                         <h2 className='text-center text-3xl font-sans font-bold'>COMMUNITY</h2>
                     </Card>
@@ -36,9 +36,9 @@ export const Homepage: React.FC = () => {
                     <Card
                         hoverable
                         onClick={() => navigate('/shop')}
-                        className = 'rounded-lg content-center hover:bg-neutral-800 h-60 w-60'
+                        className = 'rounded-lg content-center hover:bg-neutral-800 h-52 w-52'
                         style={{ width: 240 }}
-                        cover={<img className='object-scale-down px-6 py-6 hover:invert' alt="Buy & Sell" src="src/resources/shop.png" />}
+                        cover={<img className='object-scale-down px-6 py-2 hover:invert' alt="Buy & Sell" src="src/resources/shop.png" />}
                     >
                         <h2 className='text-center text-3xl font-sans font-bold'>BUY & SELL</h2>
                     </Card>
