@@ -2,10 +2,8 @@ import {
     Button,
     Cascader,
     Checkbox,
-    Col,
     Form,
     Input,
-    Row,
     Select
 } from 'antd'
 
@@ -77,8 +75,8 @@ export const Register: React.FC = () => {
 
     const prefixSelector = (
         <Form.Item name="prefix">
-            <Select className="width-70">
-                <Option value="62">+62</Option>
+            <Select style={{ width: 75 }}>
+                <Option value="+62">+62</Option>
             </Select>
         </Form.Item>
     )
@@ -91,7 +89,7 @@ export const Register: React.FC = () => {
             onFinish={onFinish}
             initialValues={{
                 residence: ['indonesia', 'jawa barat', 'bandung'],
-                prefix: '62'
+                prefix: '+62'
             }}
             scrollToFirstError
         >
@@ -160,7 +158,7 @@ export const Register: React.FC = () => {
 
             <Form.Item
                 name="residence"
-                label="Habitual Residence"
+                label="Residence"
                 rules={[
                 { type: 'array', required: true, message: 'Please select your habitual residence!' },
                 ]}
@@ -174,14 +172,6 @@ export const Register: React.FC = () => {
                 rules={[{ required: true, message: 'Please input your phone number!' }]}
             >
                 <Input className='w-full' addonBefore={prefixSelector} />
-            </Form.Item>
-
-            <Form.Item
-                name="intro"
-                label="Intro"
-                rules={[{ required: true, message: 'Please input Intro' }]}
-            >
-                <Input.TextArea showCount maxLength={100} />
             </Form.Item>
 
             <Form.Item
@@ -199,15 +189,15 @@ export const Register: React.FC = () => {
                 name="agreement"
                 valuePropName="checked"
                 rules={[
-                {
-                    validator: (_, value) =>
-                    value ? Promise.resolve() : Promise.reject(new Error('Should accept agreement')),
-                },
+                    {
+                        validator: (_, value) =>
+                        value ? Promise.resolve() : Promise.reject(new Error('Should accept agreement')),
+                    }
                 ]}
                 {...tailFormItemLayout}
             >
                 <Checkbox>
-                    I have read the <a href="/agreement">agreement</a>
+                    I have read the <a href="/agreement" target="_blank">agreement</a>
                 </Checkbox>
             </Form.Item>
             <Form.Item {...tailFormItemLayout}>
@@ -215,6 +205,6 @@ export const Register: React.FC = () => {
                     Register
                 </Button>
             </Form.Item>
-            </Form>
+        </Form>
     )
 }

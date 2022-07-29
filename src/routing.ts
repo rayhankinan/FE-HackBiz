@@ -25,12 +25,12 @@ interface PageRouting {
 
 export const Routing: PageRouting[] = [
     {
-        path: '/login',
-        component: LoginPage
+        path: '/',
+        component: HomePage
     },
     {
-        path: '/homepage',
-        component: HomePage
+        path: '/login',
+        component: LoginPage
     },
     {
         path: '/register',
