@@ -1,6 +1,6 @@
-import { Layout, Menu } from 'antd'
+import { Button, Layout, Menu } from 'antd'
 import { useContext } from 'react'
-import { Navigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 import { UserContext } from '../context'
 
 const { Header, Content, Footer } = Layout
@@ -14,6 +14,8 @@ export const StandardLayout: ({} : StandardLayoutProps) => JSX.Element = ({
 }: StandardLayoutProps) => {
     const { user }: any = useContext(UserContext)
 
+    const navigate = useNavigate()
+
     if (!user.username || !user.password) {
         return <Navigate to={"/login"} />
     }
@@ -21,25 +23,24 @@ export const StandardLayout: ({} : StandardLayoutProps) => JSX.Element = ({
     return (
         <Layout style={{ minHeight: '100vh' }}>
             <Header style={{ position: 'fixed', zIndex: 1, width: '100%', background:'white' }}>
-                <div className="logo" />
+                <div className="logo"></div>
                 <Menu
                     theme="light"
                     mode="horizontal"
-                    defaultSelectedKeys={['1']}
                     className='text-xl font-sans'
                     items={[
                         {
                             key: 1,
-                            label: "Why Construct.ly?"
+                            label: <a href="/about">Why Construct.ly?</a>
                         },
                         {
                             key: 2,
-                            label: "Products"
+                            label: <a href="/subscription">Products</a>
                         },
-                        {
-                            key: 3,
-                            label: "Pricings"
-                        }
+                        // {
+                        //     key: 3,
+                        //     label: "Pricings"
+                        // }
                     ]}
                 />
             </Header>

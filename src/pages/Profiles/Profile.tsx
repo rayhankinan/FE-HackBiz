@@ -14,10 +14,12 @@ export const Profile: React.FC = () => {
 
     useEffect(() => {
         setTimeout(() => {
+            // SIMULASI GET DATA
+            
             const result = [
                 {
                     title: 'Email',
-                    desc: 'guest@example.com'
+                    desc: 'example@example.com'
                 },
                 {
                     title: 'Username',
@@ -43,7 +45,7 @@ export const Profile: React.FC = () => {
 
             setData(result)
             setLoading(false)
-        })
+        }, 1000)
     })
 
     return (

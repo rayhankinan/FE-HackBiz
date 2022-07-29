@@ -83,6 +83,14 @@ export const Routing: PageRouting[] = [
         component: UnderConstructionPage
     },
     {
+        path: '/about',
+        component: UnderConstructionPage
+    },
+    {
+        path: '/subscription',
+        component: UnderConstructionPage
+    },
+    {
         path: '*',
         component: ErrorPage
     }
