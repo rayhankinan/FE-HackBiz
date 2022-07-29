@@ -11,7 +11,7 @@ function App() {
     const [user, setUser] = useState<any>({})
 
     useEffect(() => {
-        // SIMULASI MENGECEK COOKIES USER
+        // SIMULASI CHECK COOKIES USER
         setTimeout(() => {
             setLoading(false)
         }, 1000)

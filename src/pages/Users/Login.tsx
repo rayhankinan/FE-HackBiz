@@ -12,7 +12,7 @@ export const Login: React.FC = () => {
     const { setUser }: any = useContext(UserContext)
 
     const onFinish = (values: any) => {
-        // SIMULASI GET USER DAN MENAMBAH COOKIES USER
+        // SIMULASI CHECK USER DAN MENAMBAH COOKIES USER
         setLoading(true)
         setTimeout(() => {
             const { username, password } = values

@@ -36,7 +36,6 @@ export const Register: React.FC = () => {
 
     const onFinish = (values: any) => {
         // SIMULASI POST USER
-        setLoading(true)
         setTimeout(() => {
             navigate('/login')
             setLoading(false)
@@ -74,9 +73,6 @@ export const Register: React.FC = () => {
                 {...formItemLayout}
                 name="register"
                 onFinish={onFinish}
-                initialValues={{
-                    residence: 'indonesia'
-                }}
                 scrollToFirstError
             >
                 <Form.Item
@@ -149,7 +145,7 @@ export const Register: React.FC = () => {
                         { type: 'array', required: true, message: 'Please select your residence!' },
                     ]}
                 >
-                    <Cascader options={data.locations} />
+                    <Cascader options={data.locations} placeholder="select your residence" />
                 </Form.Item>
 
                 <Form.Item
@@ -168,6 +164,25 @@ export const Register: React.FC = () => {
                     <Select placeholder="select your gender">
                         <Option value="male">Male</Option>
                         <Option value="female">Female</Option>
+                    </Select>
+                </Form.Item>
+
+                <Form.Item
+                    name="company"
+                    label="Company"
+                    rules={[{ required: true, message: 'Please input your company!' }]}
+                >
+                    <Input className='w-full' />
+                </Form.Item>
+
+                <Form.Item
+                    name="role"
+                    label="Role"
+                    rules={[{ required: true, message: 'Please select role!' }]}
+                >
+                    <Select placeholder="select your role">
+                        <Option value="student">Student</Option>
+                        <Option value="business">Business</Option>
                     </Select>
                 </Form.Item>
 
