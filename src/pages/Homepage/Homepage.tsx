@@ -18,31 +18,31 @@ export const Homepage: React.FC = () => {
                     <Card
                         hoverable
                         onClick={() => navigate('/plan')}
-                        className = 'rounded-lg content-center hover:bg-neutral-600 h-60 w-60' 
+                        className = 'rounded-lg content-center hover:bg-neutral-800 h-60 w-60' 
                         // style={{ width: 240 }}
-                        cover={<img className='object-scale-down px-2 py-2 hover:invert' alt="Plan" src="src/resources/blueprint.png" />}
+                        cover={<img className='object-scale-down px-8 py-8 hover:invert' alt="Plan" src="src/resources/blueprint.png" />}
                     >
-                        <Meta title="Plan" />
+                        <h2 className='text-center text-3xl font-sans font-bold'>PLAN</h2>
                     </Card>
 
                     <Card
                         hoverable
                         onClick={() => navigate('/discussion')}
-                        className = 'rounded-lg content-center'
+                        className = 'rounded-lg content-center hover:bg-neutral-800 h-60 w-60' 
                         style={{ width: 240 }}
-                        cover={<img alt="Community" src="src/resources/community.png" />}
+                        cover={<img className='object-scale-down hover:invert'alt="Community" src="src/resources/community.png" />}
                     >
-                        <Meta title="Community" />
+                        <h2 className='text-center text-3xl font-sans font-bold'>COMMUNITY</h2>
                     </Card>
 
                     <Card
                         hoverable
                         onClick={() => navigate('/shop')}
-                        className = 'rounded-lg content-center'
+                        className = 'rounded-lg content-center hover:bg-neutral-800 h-60 w-60'
                         style={{ width: 240 }}
-                        cover={<img alt="Buy & Sell" src="src/resources/shop.png" />}
+                        cover={<img className='object-scale-down px-6 py-6 hover:invert' alt="Buy & Sell" src="src/resources/shop.png" />}
                     >
-                        <Meta title="Buy & Sell" />
+                        <h2 className='text-center text-3xl font-sans font-bold'>BUY & SELL</h2>
                     </Card>
                 </div>
             </div>
