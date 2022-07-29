@@ -15,35 +15,6 @@ export const Profile: React.FC = () => {
     useEffect(() => {
         setTimeout(() => {
             // SIMULASI GET DATA
-
-            const result = [
-                {
-                    title: 'Email',
-                    desc: 'example@example.com'
-                },
-                {
-                    title: 'Username',
-                    desc: user.username
-                },
-                {
-                    title: 'Company',
-                    desc: 'The Guest Company'
-                },
-                {
-                    title: 'Role',
-                    desc: 'Student'
-                },
-                {
-                    title: 'Country',
-                    desc: 'Indonesia'
-                },
-                {
-                    title: 'Subscription',
-                    desc: 'Free'
-                }
-            ]
-
-            setData(result)
             setLoading(false)
         }, 1000)
     }, [data])

@@ -32,7 +32,7 @@ export const Login: React.FC = () => {
                 <div className="shadow-lg rounded-2xl w-96 bg-white p-4" style={{ height: 520 }}>
                     <img src="../../../src/resources/logo.png" alt="" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '40%' }} />
                     <div className=" text-black font-sans text-center">
-                        <p className="text-4xl font-medium mt-4 mb-7 ">
+                        <p className="text-4xl font-medium mt-2 mb-7 ">
                             Log In
                         </p>
                     </div>
