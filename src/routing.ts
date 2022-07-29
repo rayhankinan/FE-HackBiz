@@ -48,12 +48,6 @@ const ErrorPage: LazyExoticComponent<any> = React.lazy(() =>
     }))
 )
 
-const EditPage: LazyExoticComponent<any> = React.lazy(() => 
-    import('./pages/Profiles/Edit/Edit').then((module) => ({
-        default: module.Edit
-    }))
-)
-
 interface PageRouting {
     path: string
     component: LazyExoticComponent<any>
@@ -79,10 +73,6 @@ export const Routing: PageRouting[] = [
     {
         path: '/pricing',
         component: PricingPage
-    },
-    {
-        path: '/profile/edit',
-        component: EditPage
     },
     {
         path: '/shop',

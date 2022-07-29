@@ -1,7 +1,6 @@
-import { Button, Card, Cascader, Checkbox, Modal, Form, Input, Select, Spin } from 'antd'
+import { Button, Cascader, Modal, Form, Input, Select, Spin } from 'antd'
 import { useEffect, useState } from 'react'
 
-const { Meta } = Card
 const { Option } = Select
 
 const formItemLayout = {
@@ -12,19 +11,6 @@ const formItemLayout = {
     wrapperCol: {
         xs: { span: 24 },
         sm: { span: 16 }
-    }
-}
-
-const tailFormItemLayout = {
-    wrapperCol: {
-        xs: {
-            span: 24,
-            offset: 0
-        },
-        sm: {
-            span: 16,
-            offset: 8
-        }
     }
 }
 
