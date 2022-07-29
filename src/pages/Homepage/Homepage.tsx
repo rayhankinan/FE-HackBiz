@@ -18,9 +18,9 @@ export const Homepage: React.FC = () => {
                     <Card
                         hoverable
                         onClick={() => navigate('/plan')}
-                        className = 'rounded content-center'
-                        style={{ width: 240 }}
-                        cover={<img alt="Plan" src="src/resources/blueprint.png" />}
+                        className = 'rounded-lg content-center hover:bg-neutral-600 h-60 w-60' 
+                        // style={{ width: 240 }}
+                        cover={<img className='object-scale-down px-2 py-2 hover:invert' alt="Plan" src="src/resources/blueprint.png" />}
                     >
                         <Meta title="Plan" />
                     </Card>
@@ -28,7 +28,7 @@ export const Homepage: React.FC = () => {
                     <Card
                         hoverable
                         onClick={() => navigate('/discussion')}
-                        className = 'rounded content-center'
+                        className = 'rounded-lg content-center'
                         style={{ width: 240 }}
                         cover={<img alt="Community" src="src/resources/community.png" />}
                     >
@@ -38,7 +38,7 @@ export const Homepage: React.FC = () => {
                     <Card
                         hoverable
                         onClick={() => navigate('/shop')}
-                        className = 'rounded content-center'
+                        className = 'rounded-lg content-center'
                         style={{ width: 240 }}
                         cover={<img alt="Buy & Sell" src="src/resources/shop.png" />}
                     >
