@@ -25,7 +25,7 @@ export const ShopModal: ({}: Props) => JSX.Element = ({
 }: Props) => {
     const footer = [
         <Button key="back" onClick={handleCancel}>Cancel</Button>,
-        <Button key="submit" type="primary" loading={loadingBuy} onClick={handleBuy}>Buy</Button>
+        <Button className='bg-green-600 ' key="submit" type="primary" loading={loadingBuy} onClick={handleBuy}>Buy</Button>
     ]
 
     return (
