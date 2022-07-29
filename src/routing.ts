@@ -1,4 +1,5 @@
 import React, { LazyExoticComponent } from 'react'
+import { About } from './pages/About/About'
 
 const LoginPage: LazyExoticComponent<any> = React.lazy(() => 
     import('./pages/Users/Login').then((module) => ({
@@ -33,6 +34,12 @@ const PricingPage: LazyExoticComponent<any> = React.lazy(() =>
 const ShopPage: LazyExoticComponent<any> = React.lazy(() =>
     import('./pages/Commerce/Shop').then((module) => ({
         default: module.Shop
+    }))
+)
+
+const AboutPage: LazyExoticComponent<any> = React.lazy(() =>
+    import('./pages/About/About').then((module) => ({
+        default: module.About
     }))
 )
 
@@ -92,7 +99,7 @@ export const Routing: PageRouting[] = [
     },
     {
         path: '/about',
-        component: UnderConstructionPage
+        component: AboutPage
     },
     {
         path: '*',
