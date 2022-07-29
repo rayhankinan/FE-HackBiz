@@ -45,7 +45,6 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
 
     return (
         <Layout style={{ minHeight: '100vh' }}>
-
             <Header style={{ position: 'fixed', zIndex: 1, width: '100%', height: '100px', background: '#ffffff', padding: 0, margin: 0 }}>
                 <div className="logo" style={{ width: '100%' }} />
                 <nav className="static bg-white border-gray-200 h-20">

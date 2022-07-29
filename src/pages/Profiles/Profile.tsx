@@ -3,9 +3,12 @@ import { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { StandardLayout } from '../../layout/StandardLayout'
 import { UserContext } from '../../context'
+import { EditModal } from '../../components/Profile/EditModal'
 
 export const Profile: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(true)
+    const [loadingEdit, setLoadingEdit] = useState<boolean>(false)
+    const [visibleModal, setVisibleModal] = useState<boolean>(false)
     const [data, setData] = useState<{ title: string, desc: string }[]>([])
 
     const { user }: any = useContext(UserContext)
@@ -50,7 +53,7 @@ export const Profile: React.FC = () => {
 
     return (
         <Spin tip="Loading . . ." spinning={loading} >
-            <StandardLayout >
+            <StandardLayout>
                 {/* Icon profile */}
                 <div className="flex items-center">
                     <ul className='flex flex-row'>
@@ -61,7 +64,9 @@ export const Profile: React.FC = () => {
                             <Button
                                 size="small"
                                 style={{ margin: '0 16px', verticalAlign: 'middle', marginTop: 56, paddingLeft: 7 }}
-                                onClick={() => navigate('./edit')}
+                                onClick={() => {
+                                    setVisibleModal(true)
+                                }}
                             >
                                 Edit Profile
                             </Button>
@@ -84,6 +89,23 @@ export const Profile: React.FC = () => {
                     )}
                 />
             </StandardLayout>
+            {visibleModal && (
+                <EditModal
+                    visibleModal={visibleModal}
+                    loadingEdit={loadingEdit}
+                    handleEdit={() => {
+                        // SIMULASI PUT PROFILE
+                        setLoadingEdit(true)
+                        setTimeout(() => {
+                            setLoadingEdit(false)
+                            setVisibleModal(false)
+                        }, 1000)
+                    }}
+                    handleCancel={() => {
+                        setVisibleModal(false)
+                    }}
+                />
+            )}
         </Spin>
     )
 }

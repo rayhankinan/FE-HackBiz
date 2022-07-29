@@ -1,4 +1,4 @@
-import { EditOutlined, EllipsisOutlined, SettingOutlined, ShoppingCartOutlined } from '@ant-design/icons'
+import { ShoppingCartOutlined } from '@ant-design/icons'
 import { Avatar, Button, Card, Col, Row, Spin } from 'antd'
 import { useEffect, useState } from 'react'
 import React from 'react'
@@ -12,8 +12,8 @@ export const Shop: React.FC = () => {
     const [loadingBuy, setLoadingBuy] = useState<boolean>(false)
     const [visibleModal, setVisibleModal] = useState<boolean>(false)
     const [data, setData] = useState<{
-        altImage: string, 
-        srcImage: string, 
+        altImage: string,
+        srcImage: string,
         username: string,
         title: string,
         price: string
