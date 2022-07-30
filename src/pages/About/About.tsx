@@ -52,7 +52,7 @@ export const About: React.FC = () => {
                                     <img src="../../src/resources/constructiontools.jpg" className="mr-3 h-12 mb-4" alt="Construction Planing" style={{ width: '100%', height: 'auto' }} />
                                     <div className='text-center'>
                                         <button type="button" className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700" onClick={() => navigate('/plan')}>
-                                            Start Planing
+                                            Start Planning
                                             <svg className="ml-1 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                                         </button>
                                     </div>
