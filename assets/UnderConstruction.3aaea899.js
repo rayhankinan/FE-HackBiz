@@ -1,0 +1,1 @@
+import{u as o,j as t}from"./index.510ab587.js";import{R as e}from"./index.bbba5c91.js";import{B as a}from"./button.f0a87283.js";const u=()=>{const r=o();return t(e,{status:"error",title:"Page under construction",extra:t(a,{type:"primary",onClick:()=>r("../"),children:"Back"})})};export{u as UnderConstruction};

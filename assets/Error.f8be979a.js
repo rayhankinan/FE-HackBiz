@@ -1,0 +1,1 @@
+import{u as o,j as r}from"./index.510ab587.js";import{R as a}from"./index.bbba5c91.js";import{B as e}from"./button.f0a87283.js";const m=()=>{const t=o();return r(a,{status:"error",title:"Page not found",extra:r(e,{type:"primary",onClick:()=>t("../"),children:"Back"})})};export{m as Error};
