@@ -49,7 +49,7 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
                 <div className="logo" style={{ width: '100%' }} />
                 <nav className="static bg-white border-gray-200 h-20">
                     <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
-                        <img onClick={() => navigate('/')} src="../../../src/resources/tes.png" className="cursor-pointer mr-6 h-14" alt="Profile Picture" />
+                        <img onClick={() => navigate('/')} src="../../../src/resources/logo_full.png" className="cursor-pointer mr-6 h-14" alt="Profile Picture" />
                         <div className="flex items-center">
                             <ul className='flex flex-row'>
                                 <li>
