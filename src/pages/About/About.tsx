@@ -41,7 +41,6 @@ export const About: React.FC = () => {
                                     <li>
                                         <List className='text-white'
                                             size="large"
-                                            bordered
                                             dataSource={data}
                                             renderItem={item => <List.Item className='text-white'>{item}</List.Item>}
                                         />
