@@ -30,7 +30,7 @@ export const About: React.FC = () => {
                     {/* <nav className="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900"> */}
                         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-6 py-8">
                             <a onClick={() => navigate('/')} className="flex items-center">
-                                <img src="../../src/resources/logo_negative.png" className="mr-3 h-12" alt="Flowbite Logo" />
+                                <img src="../../../logo_negative.png" className="mr-3 h-12" alt="Flowbite Logo" />
                                 <span className="self-center text-4xl font-semibold whitespace-nowrap text-white">Why Choose Construct.ly</span>
                             </a>
                         </div>
@@ -46,8 +46,8 @@ export const About: React.FC = () => {
                                     </li>
                                 </ul>
 
-                                <div className="p-8 text-left bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light dark:hover:bg-blend-darken" style={{ backgroundImage: "../../src/resources/logo.png" }}>
-                                    <img src="../../src/resources/constructiontools.jpg" className="mr-3 h-12 mb-4" alt="Construction Planing" style={{ width: '100%', height: 'auto' }} />
+                                <div className="p-8 text-left bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light dark:hover:bg-blend-darken" style={{ backgroundImage: "../../../logo.png" }}>
+                                    <img src="../../../constructiontools.jpg" className="mr-3 h-12 mb-4" alt="Construction Planing" style={{ width: '100%', height: 'auto' }} />
                                     <div className='text-center'>
                                         <button type="button" className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700" onClick={() => navigate('/plan')}>
                                             Start Planning

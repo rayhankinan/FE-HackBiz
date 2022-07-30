@@ -56,7 +56,7 @@ export const Plan: React.FC = () => {
                 {/* <nav className="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900"> */}
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-6 py-8 text-white">
                     <p className="flex items-center">
-                        <img src="../../src/resources/logo_negative.png" className="mr-3 h-12" alt="Flowbite Logo" />
+                        <img src="../../../logo_negative.png" className="mr-3 h-12" alt="Flowbite Logo" />
                         <span className="self-center text-3xl font-semibold whitespace-nowrap ">Plan your own building</span>
                     </p>
                     <p>

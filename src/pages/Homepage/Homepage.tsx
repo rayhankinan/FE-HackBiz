@@ -18,7 +18,7 @@ export const Homepage: React.FC = () => {
                         onClick={() => navigate('/plan')}
                         className = 'rounded-lg content-center hover:bg-neutral-800 h-52 w-52' 
                         // style={{ width: 240 }}
-                        cover={<img className='object-scale-down px-8 py-8 hover:invert' alt="Plan" src="src/resources/blueprint.png" />}
+                        cover={<img className='object-scale-down px-8 py-8 hover:invert' alt="Plan" src="../../../blueprint.png" />}
                     >
                         <h2 className='text-center text-3xl font-sans font-bold'>PLAN</h2>
                     </Card>
@@ -28,7 +28,7 @@ export const Homepage: React.FC = () => {
                         onClick={() => navigate('/discussion')}
                         className = 'rounded-lg content-center hover:bg-neutral-800 h-52 w-52' 
                         style={{ width: 240 }}
-                        cover={<img className='object-scale-down px-8 py-4 hover:invert'alt="Community" src="src/resources/community.png" />}
+                        cover={<img className='object-scale-down px-8 py-4 hover:invert'alt="Community" src="../../../community.png" />}
                     >
                         <h2 className='text-center text-3xl font-sans font-bold'>COMMUNITY</h2>
                     </Card>
@@ -38,7 +38,7 @@ export const Homepage: React.FC = () => {
                         onClick={() => navigate('/shop')}
                         className = 'rounded-lg content-center hover:bg-neutral-800 h-52 w-52'
                         style={{ width: 240 }}
-                        cover={<img className='object-scale-down px-6 py-2 hover:invert' alt="Buy & Sell" src="src/resources/shop.png" />}
+                        cover={<img className='object-scale-down px-6 py-2 hover:invert' alt="Buy & Sell" src="../../../shop.png" />}
                     >
                         <h2 className='text-center text-3xl font-sans font-bold'>BUY & SELL</h2>
                     </Card>

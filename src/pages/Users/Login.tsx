@@ -29,7 +29,7 @@ export const Login: React.FC = () => {
         < div className='bg-gradient-to-b from-slate-900 via-slate-600 to-white min-h-screen'>
             <div className='flex items-center justify-center h-auto space-x-40 pt-56'>
                 <div className="shadow-lg rounded-2xl w-96 bg-white p-4" style={{ height: 520 }}>
-                    <img src="../../../src/resources/logo.png" alt="" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '40%' }} />
+                    <img src="../../../logo.png" alt="" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '40%' }} />
                     <div className=" text-black font-sans text-center">
                         <p className="text-4xl font-medium mt-2 mb-7 ">
                             Log In
