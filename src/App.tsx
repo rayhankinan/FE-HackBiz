@@ -21,7 +21,7 @@ function App() {
         <Spin tip="Loading . . ." spinning={loading}>
             <UserContext.Provider value={{ user, setUser }}>
                 <Suspense fallback={<div>Loading . . .</div>}>
-                <BrowserRouter basename='/FE-HackBiz'>
+                <BrowserRouter>
                     <Routes>
                         {Routing.map((route) => {
                             const Component = route.component
