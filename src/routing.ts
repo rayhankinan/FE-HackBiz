@@ -102,6 +102,10 @@ export const Routing: PageRouting[] = [
         component: PlanPage
     },
     {
+        path: '/analyze',
+        component: UnderConstructionPage
+    },
+    {
         path: '/discussion',
         component: DiscussionPage
     },

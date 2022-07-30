@@ -1,6 +1,6 @@
 import { Spin } from 'antd'
 import { Suspense, useEffect, useState } from 'react'
-import { Route, BrowserRouter, Routes } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import { Routing } from './routing'
 import { UserContext } from './context'
@@ -21,21 +21,21 @@ function App() {
         <Spin tip="Loading . . ." spinning={loading}>
             <UserContext.Provider value={{ user, setUser }}>
                 <Suspense fallback={<div>Loading . . .</div>}>
-                <BrowserRouter basename='/FE-HackBiz'>
-                    <Routes>
-                        {Routing.map((route) => {
-                            const Component = route.component
-                            return (
-                                <Route
-                                    caseSensitive
-                                    path={route.path}
-                                    key={route.path}
-                                    element={<Component />}
-                                />
-                            )
-                        })}
-                    </Routes>
-                </BrowserRouter>
+                    <HashRouter>
+                        <Routes>
+                            {Routing.map((route) => {
+                                const Component = route.component
+                                return (
+                                    <Route
+                                        caseSensitive
+                                        path={route.path}
+                                        key={route.path}
+                                        element={<Component />}
+                                    />
+                                )
+                            })}
+                        </Routes>
+                    </HashRouter>
                 </Suspense>
             </UserContext.Provider>
             <ToastContainer
