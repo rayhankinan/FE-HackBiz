@@ -46,22 +46,6 @@ export const Plan: React.FC = () => {
     useEffect(() => {
         // SIMULASI GET DATA
         setTimeout(() => {
-            const result = [
-                {
-                    value: 'indonesia',
-                    label: 'Indonesia'
-                },
-                {
-                    value: 'malaysia',
-                    label: 'Malaysia'
-                },
-                {
-                    value: 'thailand',
-                    label: 'Thailand'
-                }
-            ]
-
-            setData(result)
             setLoading(false)
         }, 1000)
     }, [data])
@@ -81,55 +65,80 @@ export const Plan: React.FC = () => {
                 </div>
 
                 <Spin tip="Loading . . ." spinning={loading}>
-                    <Form className='text-white'
+                    <div className='flex items-center justify-center h-auto space-x-40'>
+                    <Form className='text-white w-3/6'
                         {...formItemLayout}
                         name="register"
                         onFinish={onFinish}
                         scrollToFirstError
                     >
-                        <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Select your country</label>
-                        <select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option>United States</option>
-                            <option>Canada</option>
-                            <option>France</option>
-                            <option>Germany</option>
+                        <label htmlFor="city" className="block mb-2 text-sm font-medium text-gray-400 pt-7">Select your city</label>
+                        <select id="city" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option>Bandung</option>
+                            <option>Jakarta</option>
+                            <option>Surabaya</option>
+                            <option>Semarang</option>
                         </select>
-                        <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Select your country</label>
-                        <select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option>United States</option>
-                            <option>Canada</option>
-                            <option>France</option>
-                            <option>Germany</option>
+                        <label htmlFor="size" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400 pt-7">Select building size</label>
+                        <select id="size" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option>Small</option>
+                            <option>Medium</option>
+                            <option>Large</option>
+                            <option>Extra Large</option>
                         </select>
-                        <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Select your country</label>
-                        <select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option>United States</option>
-                            <option>Canada</option>
-                            <option>France</option>
-                            <option>Germany</option>
+                        <label htmlFor="concrete" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400 pt-7">Select your concrete choice</label>
+                        <select id="concrete" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option>C7/8</option>
+                            <option>C10</option>
+                            <option>C20</option>
+                            <option>C30</option>
+                            <option>C40</option>
                         </select>
-                        <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Select your country</label>
-                        <select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option>United States</option>
-                            <option>Canada</option>
-                            <option>France</option>
-                            <option>Germany</option>
+                        <label htmlFor="bricks" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400 pt-7">Select your bricks choice</label>
+                        <select id="bricks" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option>Sun-dried bricks</option>
+                            <option>Burnt clay bricks</option>
+                            <option>Fly ash bricks</option>
+                            <option>Concrete bricks</option>
                         </select>
-                        <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Select your country</label>
-                        <select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option>United States</option>
-                            <option>Canada</option>
-                            <option>France</option>
-                            <option>Germany</option>
+                        <label htmlFor="wood" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400 pt-7">Select your wood choice</label>
+                        <select id="wood" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option>Pine</option>
+                            <option>Cedarwood</option>
+                            <option>Firwood</option>
+                            <option>Spruce</option>
                         </select>
-                        <div className="mt-10 ml-90 text-left">
+                        <label htmlFor="stone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400 pt-7">Select your stone choice</label>
+                        <select id="stone" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option>Granite</option>
+                            <option>Marble</option>
+                            <option>Laterite</option>
+                            <option>Quartz</option>
+                        </select>
+                        <label htmlFor="steel" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400 pt-7">Select your steel choice</label>
+                        <select id="steel" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option>Light gauge</option>
+                            <option>Structural steel</option>
+                            <option>Mild steel</option>
+                            <option>Rebar</option>
+                        </select>
+                        <label htmlFor="sand" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400 pt-7">Select your sand choice</label>
+                        <select id="sand" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option>Utility sand</option>
+                            <option>Fill sand</option>
+                            <option>Concrete sand</option>
+                            <option>Coarse sand</option>
+                        </select>
+                
+                        <div className="mt-10 ml-90 text-left flex items-center justify-center h-auto space-x-40">
                             <Form.Item {...tailFormItemLayout}>
-                                <Button type="primary" htmlType="submit" className=''>
-                                    Save
+                                <Button type="primary" htmlType="submit" className='text-black items-center hover:bg-lime-500'>
+                                    Check
                                 </Button>
                             </Form.Item>
                         </div>
                     </Form>
+                    </div>
                 </Spin>
             </div>
 
