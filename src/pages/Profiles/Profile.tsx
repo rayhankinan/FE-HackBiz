@@ -1,8 +1,9 @@
-import { Button, List, Spin } from 'antd'
+import { Button, List, Spin, Avatar } from 'antd'
 import { useContext, useEffect, useState } from 'react'
 import { StandardLayout } from '../../layout/StandardLayout'
 import { UserContext } from '../../context'
 import { EditModal } from '../../components/Profile/EditModal'
+import autoprefixer from 'autoprefixer'
 
 export const Profile: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(true)
@@ -24,10 +25,9 @@ export const Profile: React.FC = () => {
             <StandardLayout>
                 <div className='bg-gradient-to-b from-slate-900 via-slate-600 to-white min-h-screen'>
                     <h4 className="site-layout-background font-sans font-bold text-white text-8xl text-center" style={{ padding: 10, minHeight: 100 }}>
-                        <img src="../../../src/resources/guest_user.png" alt="" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto' }} />
+                        <Avatar className='text-5xl pt-6' style={{ textAlign:'center', width:100, height:100, display:'block', marginLeft:'auto', marginRight:'auto', backgroundColor: '#00A9EF', verticalAlign: 'middle', marginTop:10}} size="large">{(user.username.charAt(0))}</Avatar>
                     </h4>
-
-                    <p className="site-layout-background font-sans font-bold text-white text-4xl text-center" style={{ padding: 0, minHeight: 100 }}>
+                    <p className="site-layout-background font-sans font-bold text-white text-4xl text-center " style={{ minHeight: 100 }}>
                         {user.username}
                     </p>
                     <div className="text-center">

@@ -38,7 +38,7 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
             ]}
         />
     );
-    
+
     if (!user.username || !user.password) {
         return <Navigate to={"/login"} />
     }
@@ -53,7 +53,7 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
                         <div className="flex items-center">
                             <ul className='flex flex-row'>
                                 <li>
-                                    <img src="../../../src/resources/guest_user.png" className="mr-6 h-14" alt="Guest User Profile" />
+                                    <Avatar style={{ backgroundColor: '#00A9EF', verticalAlign: 'middle', marginRight: 10 }} size="large">{(user.username.charAt(0))}</Avatar>
                                 </li>
                                 <li>
                                     <a onClick={() => navigate('/profile')} className="font-bold text-sm text-blue-600 hover:underline">{user.username}</a>
@@ -88,7 +88,7 @@ export const StandardLayout: ({ }: StandardLayoutProps) => JSX.Element = ({
                 </nav>
 
             </Header>
-            <Content className="site-layout" style={{ paddingTop:60, marginTop: 64 }}>
+            <Content className="site-layout" style={{ paddingTop: 60, marginTop: 64 }}>
                 {children}
             </Content>
             <Footer style={{ textAlign: 'center' }}>Construct.ly ©2022 Created by asepBalon</Footer>
