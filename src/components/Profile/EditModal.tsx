@@ -31,8 +31,8 @@ export const EditModal: ({}: Props) => JSX.Element = ({
     const [data, setData] = useState<{value: string, label: string}[]>([])
 
     const footer = [
-        <Button key="back" onClick={handleCancel}>Cancel</Button>,
-        <Button key="submit" type="primary" loading={loadingEdit} onClick={handleEdit}>Edit</Button>
+        <Button className='hover:bg-red-500 hover:text-white' key="back" onClick={handleCancel}>Cancel</Button>,
+        <Button className='text-black hover:bg-green-500' key="submit" type="primary" loading={loadingEdit} onClick={handleEdit}>Edit</Button>
     ]
 
     useEffect(() => {
