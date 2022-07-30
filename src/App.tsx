@@ -1,6 +1,6 @@
 import { Spin } from 'antd'
 import { Suspense, useEffect, useState } from 'react'
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import { Routing } from './routing'
 import { UserContext } from './context'
@@ -8,7 +8,7 @@ import './App.css'
 
 function App() {
     const [loading, setLoading] = useState<boolean>(true)
-    const [user, setUser] = useState<{username?: string, password?:string}>({})
+    const [user, setUser] = useState<{username?: string, password ?: string}>({})
 
     useEffect(() => {
         // SIMULASI CHECK COOKIES USER
