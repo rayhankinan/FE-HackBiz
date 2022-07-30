@@ -31,7 +31,7 @@ export const About: React.FC = () => {
                         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-6 py-8">
                             <a onClick={() => navigate('/')} className="flex items-center">
                                 <img src="../../src/resources/logo_negative.png" className="mr-3 h-12" alt="Flowbite Logo" />
-                                <span className="self-center text-3xl font-semibold whitespace-nowrap text-white">Why Choose Construct.ly</span>
+                                <span className="self-center text-4xl font-semibold whitespace-nowrap text-white">Why Choose Construct.ly</span>
                             </a>
                         </div>
 
@@ -39,8 +39,7 @@ export const About: React.FC = () => {
                             <div className="grid py-5 px-4 mx-auto max-w-screen-xl text-sm text-gray-500 dark:text-gray-400 md:grid-cols-2 md:px-6" style={{ gridGap: 20 }}>
                                 <ul className="block mb-8 space-y- " aria-labelledby="mega-menu-full-image-button">
                                     <li>
-                                        <List className='text-white'
-                                            size="large"
+                                        <List className='text-white text-2xl'
                                             dataSource={data}
                                             renderItem={item => <List.Item className='text-white'>{item}</List.Item>}
                                         />
