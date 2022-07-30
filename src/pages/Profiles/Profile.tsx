@@ -23,7 +23,6 @@ export const Profile: React.FC = () => {
         <Spin tip="Loading . . ." spinning={loading}>
             <StandardLayout>
                 <div className='bg-gradient-to-b from-slate-900 via-slate-600 to-white min-h-screen'>
-
                     <h4 className="site-layout-background font-sans font-bold text-white text-8xl text-center" style={{ padding: 10, minHeight: 100 }}>
                         <img src="../../../src/resources/guest_user.png" alt="" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto' }} />
                     </h4>
