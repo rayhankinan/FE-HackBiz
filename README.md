@@ -33,4 +33,4 @@ Team asepBalon : <br>
 4. Vincentius Verel Siedharta <br>
 
 ##
-URL: https://rayhankinan.github.io/FE-HackBiz
+URL: <a href="https://rayhankinan.github.io/FE-HackBiz" target="_blank">Construct.ly</a>
